@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Volumul cilindrului</title>
+
+<body>
+  <br>
+  Raza: 
+  <input type="text" id="radius">
+  <br>
+  Inaltimea:
+  <input type="text" id="height">
+  <br>
+  <input type="button" value="Calculeaza" id="btnCalc" >
+<script>
+
+function calc(){
+    let raza=document.getElementById("radius").value;
+    let inaltimea=document.getElementById("height").value;
+
+    raza=Number(raza);
+    inaltimea=Number(inaltimea);
+
+
+    let volum=Math.PI*Math.pow(raza, 2)*inaltimea;
+
+    volum =volum.toFixed(2);
+    alert("The volume: "+volum);
+}
+
+
+let btnCalc=document.getElementById("btnCalc");
+btnCalc.onclick=calc;
+
+</script>
+
+</body>
+
+</head>
+</html>
